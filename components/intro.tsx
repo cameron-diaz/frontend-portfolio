@@ -8,7 +8,11 @@ export default function Intro() {
                 <div>
                     <Image src={photo} alt="Cameron photo" width={192} height={192} quality={95}
                     priority={true}
+                    className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
                     />
+                    <span>
+                        
+                    </span>
                 </div>
             </div>
         </section>
