@@ -24,3 +24,4 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
+// properties become readonly
