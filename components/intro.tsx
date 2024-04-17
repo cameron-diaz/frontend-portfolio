@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
+import { FaGithubSquare } from 'react-icons/fa';
 
 export default function Intro() {
   return (
@@ -62,21 +63,46 @@ export default function Intro() {
         and industry best practices to deliver exceptional results.
       </motion.p>
 
-      <div>
+      <motion.div
+        className='flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row'
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
         {/* use <Link> because nagivation */}
         <Link
           href='#contact'
-          className='flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white'
+          className='group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-90'
         >
-          Contact me here <BsArrowRight />
+          Contact me here{' '}
+          <BsArrowRight className='opacity-70 transition group-hover:translate-x-1' />
         </Link>
-        <a className='flex items-center  gap-2 rounded-full bg-white px-7 py-3 text-gray-900'>
-          Download Resume <HiDownload />
+
+        <a
+          className='group flex cursor-pointer  items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 text-gray-900 outline-none transition hover:scale-110 focus:scale-110 active:scale-90'
+          href='/CameronDiaz_Resume24.pdf'
+          download
+        >
+          Download Resume{' '}
+          <HiDownload className='opacity-60 transition group-hover:translate-y-1' />
         </a>
-        <a className='flex items-center gap-2 rounded-full bg-white p-4 text-gray-700'>
+
+        <a
+          className='group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-90'
+          href='https://linkedin.com/in/camerondiaz'
+          target=''
+        >
           <BsLinkedin />
         </a>
-      </div>
+
+        <a
+          className='group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.30rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-90'
+          href='https://github.com/cameron-diaz'
+          target=''
+        >
+          <FaGithubSquare />
+        </a>
+      </motion.div>
     </section>
   );
 }
