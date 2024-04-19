@@ -90,7 +90,7 @@ export default function Intro() {
         <a
           className='group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-90'
           href='https://linkedin.com/in/camerondiaz'
-          target=''
+          target='_blank'
         >
           <BsLinkedin />
         </a>
@@ -98,7 +98,7 @@ export default function Intro() {
         <a
           className='group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.30rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-90'
           href='https://github.com/cameron-diaz'
-          target=''
+          target='_blank'
         >
           <FaGithubSquare />
         </a>
