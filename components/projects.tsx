@@ -22,11 +22,12 @@ type ProjectProps = (typeof projectsData)[number];
 
 function Project({ title, description, tags, imageUrl }: ProjectProps) {
   return (
-    <section className='relative max-w-[42rem] overflow-hidden border-black/5 bg-gray-100 sm:pr-8 sm:h-[20rem]'>
-      <div className='py-4 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%]'>
+    <section className='group relative max-w-[42rem] overflow-hidden border-black/5 bg-gray-100 sm:pr-8 sm:h-[20rem] mb-3 sm:mb-8 last:mb-0 even:pl-8'>
+
+      <div className='pt-4 pb-6 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full group-even:ml-[26rem]'>
         <h3 className='text-2xl font-semibold'>{title}</h3>
         <p className='mt-2 leading-relaxed text-gray-700'>{description}</p>
-        <ul className='mt-4 flex flex-wrap gap-2'>
+        <ul className='mt-4 flex flex-wrap gap-2 sm:mt-auto'>
           {tags.map((tag, index) => (
             <li
               className='rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white'
@@ -41,7 +42,7 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
         src={imageUrl}
         alt={title}
         quality={95}
-        className='absolute -right-40 top-8 w-[28.25rem] rounded-t-lg shadow-2xl'
+        className='absolute -right-40 top-8 w-[28.25rem] rounded-t-lg shadow-2xl group-even:right-[initial] group-even:-left-40'
       />
     </section>
   );
