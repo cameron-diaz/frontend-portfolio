@@ -9,7 +9,10 @@ import { FaGithubSquare } from 'react-icons/fa';
 
 export default function Intro() {
   return (
-    <section className='sm: mb-28 max-w-[50rem] text-center'>
+    <section
+      id='home'
+      className='sm: mb-28 max-w-[50rem] scroll-mt-[100rem] text-center'
+    >
       <div className='flex items-center justify-center'>
         <div className='relative'>
           <motion.div
@@ -51,16 +54,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Dynamic and adaptable{' '}
-        <span className='font-bold'> Software Engineer </span> with a proven
-        track record of success in diverse client projects. Specialized in{' '}
-        <span className='font-bold'>Front-End development </span> , with recent
-        focus on enhancing proficiency in React and TypeScript, while expanding
-        skills to encompass Back-End tasks using Node.js, AWS, and serverless
-        technologies. Experienced in designing and building UI for innovative
-        applications, such as a Generative AI Chat application using Next.js.
-        Proficient in utilizing contemporary development tools, methodologies,
-        and industry best practices to deliver exceptional results.
+        Cameron Diaz - Front-end Developer specializing in React/Next.js
       </motion.p>
 
       <motion.div

@@ -2,8 +2,12 @@
 import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
+import clsx from 'clsx';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Header() {
+  const { activeSection, setActiveSection } = useActiveSectionContext();
+
   return (
     <header className='relative z-[999]'>
       <motion.div
@@ -15,16 +19,33 @@ export default function Header() {
         <ul className='flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5'>
           {links.map((link) => (
             <motion.li
-              className='flex h-3/4 items-center justify-center'
+              className='relative flex h-3/4 items-center justify-center'
               key={link.hash}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
+              onClick={() => setActiveSection(link.name)}
             >
               <Link
-                className='flex w-full items-center justify-center px-3 py-3 transition hover:text-gray-950'
+                className={clsx(
+                  'flex w-full items-center justify-center px-3 py-3 transition hover:text-gray-950',
+                  {
+                    'text-gray-950': activeSection === link.name,
+                  }
+                )}
                 href={link.hash}
               >
                 {link.name}
+                {link.name === activeSection && (
+                  <motion.span
+                    layoutId='activeSection'
+                    transition={{
+                      type: 'spring',
+                      stiffness: 380,
+                      damping: 30,
+                    }}
+                    className='absolute inset-0 -z-10 rounded-full bg-gray-100'
+                  ></motion.span>
+                )}
               </Link>
             </motion.li>
           ))}
