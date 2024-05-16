@@ -5,38 +5,38 @@ import { useContext } from 'react';
 
 type SectionName = (typeof links)[number]['name'];
 type ActiveSectionContextProviderProps = {
-  children: React.ReactNode;
+    children: React.ReactNode;
 };
 type ActiveSectionContextType = {
-  activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+    activeSection: SectionName;
+    setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
 };
 
 export const ActiveSectionContext =
-  createContext<ActiveSectionContextType | null>(null);
+    createContext<ActiveSectionContextType | null>(null);
 
 export default function ActiveSectionContextProvider({
-  children,
+    children,
 }: ActiveSectionContextProviderProps) {
-  const [activeSection, setActiveSection] = useState<SectionName>('Home');
+    const [activeSection, setActiveSection] = useState<SectionName>('Home');
 
-  return (
-    <ActiveSectionContext.Provider
-      value={{
-        activeSection,
-        setActiveSection,
-      }}
-    >
-      {children}
-    </ActiveSectionContext.Provider>
-  );
+    return (
+        <ActiveSectionContext.Provider
+            value={{
+                activeSection,
+                setActiveSection,
+            }}
+        >
+            {children}
+        </ActiveSectionContext.Provider>
+    );
 }
 
 export function useActiveSectionContext() {
-  const context = useContext(ActiveSectionContext);
+    const context = useContext(ActiveSectionContext);
 
-  if (context === null) {
-    throw new Error('useActiveSectionContext must be used within Provider');
-  }
-  return context;
+    if (context === null) {
+        throw new Error('useActiveSectionContext must be used within Provider');
+    }
+    return context;
 }
