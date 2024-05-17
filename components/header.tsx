@@ -6,7 +6,8 @@ import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Header() {
-    const { activeSection, setActiveSection } = useActiveSectionContext();
+    const { activeSection, setActiveSection, setTimeOfLastClick } =
+        useActiveSectionContext();
 
     return (
         <header className='relative z-[999]'>
@@ -23,7 +24,10 @@ export default function Header() {
                             key={link.hash}
                             initial={{ y: -100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            onClick={() => setActiveSection(link.name)}
+                            onClick={() => {
+                                setActiveSection(link.name);
+                                setTimeOfLastClick(Date.now());
+                            }}
                         >
                             <Link
                                 className={clsx(
