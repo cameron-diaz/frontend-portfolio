@@ -59,27 +59,49 @@ export const projectsData = [
 
 export const experiencesData = [
     {
-        title: 'Graduated bootcamp',
-        location: 'Miami, FL',
+        title: 'Web Developer',
+        location: 'Remote (Durham, NC)',
+        company: 'Momentum',
         description:
-            'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
+            'Achieved successful completion of immersive software development training over 16 weeks, specializing in refining skills in Python/Django, JavaScript, HTML, and CSS through hands-on, project-based learning. Engaged in solo, pair programming, and group projects daily and weekly to master contemporary development tools, methodologies, and industry best practices.',
         icon: React.createElement(LuGraduationCap),
-        date: '2019',
+        date: '2021',
     },
     {
-        title: 'Front-End Developer',
-        location: 'Orlando, FL',
+        title: 'Associate Software Engineer',
+        location: 'Remote (Raleigh, NC)',
+        company: 'Insight Enterprises',
         description:
-            'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
+            'Engaged in a variety of client projects, refining skills in Front-End development and contributing to Back-End tasks. Utilized technologies such as React.js, HTML/CSS, Tailwind CSS, Next.js, Node.js, and AWS. Demonstrated adaptability to rapidly meet client needs and commitment to continuous learning. Designed UI for a Generative AI Chat application using Next.js.',
         icon: React.createElement(CgWorkAlt),
-        date: '2019 - 2021',
+        date: '2021 - 2022',
     },
     {
-        title: 'Full-Stack Developer',
-        location: 'Houston, TX',
+        title: 'Software Engineer',
+        location: 'Remote (Raleigh, NC)',
+        company: 'Insight Enterprises',
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+            'Elevated proficiency in Front-End development with React and TypeScript, while broadening expertise to encompass Back-End tasks utilizing Node.js, AWS, and serverless technologies.Bridged the gap in back end development on a client project, seamlessly integrating front end and back end tasks to complete project requirements, thereby strengthening client relationships.',
         icon: React.createElement(FaReact),
-        date: '2021 - present',
+        date: '2023 - 2024',
     },
+] as const;
+
+export const skillsData = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'Node.js',
+    'Github',
+    'Tailwind',
+    'Prisma',
+    'MongoDB',
+    'Redux',
+    'Express',
+    'Python',
+    'Django',
+    'Framer Motion',
 ] as const;
