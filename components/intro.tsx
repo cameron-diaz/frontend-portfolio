@@ -76,7 +76,7 @@ export default function Intro() {
                 </Link>
 
                 <a
-                    className='group flex cursor-pointer  items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 text-gray-900 outline-none transition hover:scale-110 focus:scale-110 active:scale-90'
+                    className='group flex cursor-pointer  items-center gap-2 rounded-full borderBlack bg-white px-7 py-3 text-gray-900 outline-none transition hover:scale-110 focus:scale-110 active:scale-90'
                     href='/CameronDiaz_Resume24.pdf'
                     download
                 >
@@ -85,7 +85,7 @@ export default function Intro() {
                 </a>
 
                 <a
-                    className='group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-90'
+                    className='group flex cursor-pointer items-center gap-2 rounded-full borderBlack bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-90'
                     href='https://linkedin.com/in/camerondiaz'
                     target='_blank'
                 >
@@ -93,7 +93,7 @@ export default function Intro() {
                 </a>
 
                 <a
-                    className='group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.30rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-90'
+                    className='group flex cursor-pointer items-center gap-2 rounded-full borderBlack bg-white p-4 text-[1.30rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-90'
                     href='https://github.com/cameron-diaz'
                     target='_blank'
                 >
