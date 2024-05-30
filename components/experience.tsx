@@ -11,9 +11,13 @@ import { useSectionInView } from '@/lib/hooks';
 
 export default function Experience() {
     const { ref } = useSectionInView('Experience', 0.5);
-    
+
     return (
-        <section id='experience' ref={ref} className='scroll-mt-28 mb-28 sm:mb-40'>
+        <section
+            id='experience'
+            ref={ref}
+            className='mb-28 scroll-mt-28 sm:mb-40'
+        >
             <SectionHeading>My Experience</SectionHeading>
             <VerticalTimeline lineColor=''>
                 {experiencesData.map((item, index) => (
@@ -36,7 +40,7 @@ export default function Experience() {
                                 fontSize: '1.5rem',
                             }}
                         >
-                            <h3 className='font-semibold !capitalize mb-[.075rem]'>
+                            <h3 className='mb-[.075rem] font-semibold !capitalize'>
                                 {item.title}
                             </h3>
                             <p className='!mt-0 font-normal'>{item.location}</p>

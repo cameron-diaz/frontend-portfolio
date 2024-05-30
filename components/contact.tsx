@@ -4,8 +4,11 @@ import { FaPaperPlane } from 'react-icons/fa';
 
 export default function Contact() {
     return (
-        <section id='contact' className='mb-20 sm:mb-28 
-        w-[min(100%,38rem)]'>
+        <section
+            id='contact'
+            className='mb-20 w-[min(100%,38rem)] 
+        sm:mb-28'
+        >
             <SectionHeading>Contact Me</SectionHeading>
             <p className='text-gray-700'>
                 You can contact me directly at{' '}
@@ -18,10 +21,14 @@ export default function Contact() {
                 or through this form
             </p>
             <form className='mt-10 flex flex-col'>
-                <input type="email" className="h-14 rounded-lg borderBlack" />
-                <textarea className='h-52 my-3 rounded-lg borderBlack p-4' />
-                <button type='submit' className='flex group justify-center items-center gap-2 h-[3rem] w-[8rem] bg-gray-800 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 '>
-                    Submit <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1'/>
+                <input type='email' className='borderBlack h-14 rounded-lg' />
+                <textarea className='borderBlack my-3 h-52 rounded-lg p-4' />
+                <button
+                    type='submit'
+                    className='group flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-gray-800 text-white outline-none transition-all hover:scale-110 focus:scale-110 active:scale-105 '
+                >
+                    Submit{' '}
+                    <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:-translate-y-1 group-hover:translate-x-1' />
                 </button>
             </form>
         </section>
