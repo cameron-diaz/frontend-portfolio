@@ -42,8 +42,8 @@ export default function Contact() {
             </p>
             <form
                 className='mt-10 flex flex-col'
-                action={async formData => {
-                    await sendEmail(formData)
+                action={async (formData) => {
+                    await sendEmail(formData);
                 }}
             >
                 <input
