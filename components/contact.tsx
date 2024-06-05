@@ -2,16 +2,26 @@
 
 import React from 'react';
 import SectionHeading from './section-heading';
-import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import { sendEmail } from '@/actions/sendEmail';
-import { useFormStatus } from 'react-dom';
 import SubmitButton from './submit-button';
 import toast from 'react-hot-toast';
+import { useFormState } from 'react-dom';
+
+// type SendEmailActionType = (formData: FormData) => Promise<void>;
 
 export default function Contact() {
     const { ref } = useSectionInView('Contact');
+    // const sendEmailAction = async (formData: FormData) => {
+    //     const { data, error } = await sendEmail(formData);
+    //     if (error) {
+    //         toast.error(error);
+    //         return;
+    //     }
+    //     toast.success('email sent successfully');
+    // }
+    // const [state, action] = useFormState(sendEmailAction: SendEmailActionType, { error: null })
 
     return (
         <motion.section
@@ -38,9 +48,9 @@ export default function Contact() {
                 You can contact me directly at{' '}
                 <a
                     className='underline'
-                    href='mailto:camerondiaz1004@gmail.com'
+                    href='mailto:camerondiaz1994@gmail.com'
                 >
-                    camerondiaz1004@gmail.com
+                    camerondiaz1994@gmail.com
                 </a>{' '}
                 or through this form
             </p>
