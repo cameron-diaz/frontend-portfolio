@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <header className='relative z-[999]'>
             <motion.div
-                className='fixed left-1/2 top-0 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full'
+                className='fixed left-1/2 top-0 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40'
                 initial={{ y: -100, x: '-50%', opacity: 0 }}
                 animate={{ y: 0, x: '-50%', opacity: 1 }}
             ></motion.div>
@@ -30,10 +30,11 @@ export default function Header() {
                             }}
                         >
                             <Link
+                                // conditional classNames
                                 className={clsx(
-                                    'flex w-full items-center justify-center px-3 py-3 transition hover:text-gray-950',
+                                    'flex w-full items-center justify-center px-3 py-3 transition hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-300',
                                     {
-                                        'text-gray-950':
+                                        'text-gray-950 dark:text-gray-200':
                                             activeSection === link.name,
                                     }
                                 )}
@@ -48,7 +49,7 @@ export default function Header() {
                                             stiffness: 380,
                                             damping: 30,
                                         }}
-                                        className='absolute inset-0 -z-10 rounded-full bg-gray-100'
+                                        className='absolute inset-0 -z-10 rounded-full bg-gray-100 dark:bg-gray-800'
                                     ></motion.span>
                                 )}
                             </Link>
