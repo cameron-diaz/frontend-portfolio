@@ -56,11 +56,11 @@ export default function ThemeContextProvider({
 }
 
 export function useTheme() {
-    const context = useContext(ThemeContext)
+    const context = useContext(ThemeContext);
 
     if (context === null) {
-        throw new Error("UseTheme must be used within Theme Context Provider")
+        throw new Error('UseTheme must be used within Theme Context Provider');
     }
 
-    return context
+    return context;
 }

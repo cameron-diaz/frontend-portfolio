@@ -37,12 +37,18 @@ export default function Experience() {
                                         : 'rgba(255, 255, 255, 0.05)',
                             }}
                             contentArrowStyle={{
-                                borderRight: theme === 'light' ? '0.4rem solid #9ca3af': '0.4rem solid rgba(255, 255, 255, 0.5)',
+                                borderRight:
+                                    theme === 'light'
+                                        ? '0.4rem solid #9ca3af'
+                                        : '0.4rem solid rgba(255, 255, 255, 0.5)',
                             }}
                             date={item.date}
                             icon={item.icon}
                             iconStyle={{
-                                background: theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
+                                background:
+                                    theme === 'light'
+                                        ? 'white'
+                                        : 'rgba(255, 255, 255, 0.15)',
                                 fontSize: '1.5rem',
                             }}
                         >

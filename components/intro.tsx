@@ -84,7 +84,7 @@ export default function Intro() {
                 </Link>
 
                 <a
-                    className='borderBlack group flex  cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 text-gray-900 outline-none transition hover:scale-110 focus:scale-110 active:scale-90 dark:text-white dark:bg-white/10'
+                    className='borderBlack group flex  cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 text-gray-900 outline-none transition hover:scale-110 focus:scale-110 active:scale-90 dark:bg-white/10 dark:text-white'
                     href='/CameronDiaz_Resume24.pdf'
                     download
                 >
